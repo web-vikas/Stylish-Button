@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #333;
+}
+
+button {
+    padding: 10px 30px;
+    border: 2px solid rgb(106, 103, 103);
+    background: #333;
+    color: rgb(230, 227, 227);
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+    position: relative;
+}
+
+button::after,
+button::before {
+    position: absolute;
+    content: '';
+    background: #333;
+    height: 5px;
+    width: 13px;
+    border: 1.5px solid rgb(164, 20, 247);
+    transition: all 500ms ease-in-out;
+}
+
+button::before {
+    top: -5px;
+    left: 10px;
+}
+
+button::after {
+    bottom: -5px;
+    right: 10px;
+}
+
+button:hover:before {
+    top: -5px;
+    box-shadow: 0 0 4px 0px rgb(164, 20, 247);
+    left: 90px;
+}
+
+button:hover:after {
+    bottom: -5px;
+    box-shadow: 0 0 4px 0px rgb(164, 20, 247);
+    right: 90px;
+}
+
+button:hover {
+    box-shadow: 0 0 4px 0px rgb(164, 20, 247);
+    border: 2px solid rgb(164, 20, 247);
+}
